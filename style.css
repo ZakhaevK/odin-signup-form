@@ -1,9 +1,11 @@
 body {
   display: flex;
+  margin: 0;
   background-color: rgb(247, 247, 247);
 }
 
 .sidebar {
+  position: sticky;
   height: 1000px;
   width: 600px;
   flex-shrink: 0.5;
@@ -28,7 +30,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 700px;
+  width: 600px;
   margin-right: 10px;
 
 }
