@@ -1,12 +1,17 @@
 body {
   display: flex;
+  align-items: stretch;
+  justify-content: center;
   margin: 0;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(31, 31, 31);
+  height: 100vh;
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
   position: sticky;
-  height: 1000px;
   width: 500px;
   flex-shrink: 0.5;
   background-image: url(images/bg.avif);
@@ -14,12 +19,38 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border: none;
+  color: aliceblue;
+}
+
+.ribbon {
+  background-color: rgba(0, 0, 0, 40%);
+  font-size: 4rem;
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(100vh * 0.2);
+}
+
+.ribbon img {
+  height: 120px;
+}
+
+.sidebar p {
+  align-self: center;
 }
 
 .main {
-  display: block;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
+  padding: 0px;
   width: 650px;
+}
+
+.main h2 {
+  padding-left: 30px;
 }
 
 input, label, li, ul {
@@ -28,31 +59,43 @@ input, label, li, ul {
   font-size: 1rem;
 }
 
-ul {
-  box-shadow: 2px 2.5px 4px rgb(241, 241, 241);
+.main ul {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 3px 5px rgb(187, 187, 187);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 600px;
-  margin-right: 10px;
-
 }
 
-li {
+.main ul h2 {
+  padding-left: 0px;
+  flex: 100%;
+}
+
+.main li {
   position: relative;
   list-style: none;
   margin-top: 30px;
 }
 
-li label {
+.main li label {
   position: absolute;
   font-size: 0.9rem;
   top: -20px;
   left: 0px;
 }
 
-li input {
+.main li input {
   margin-right: 30px;
   padding: 2px;
+}
+
+.main button {
+  margin: 30px;
+}
+
+.main p {
+  margin-left: 30px;
 }
 
