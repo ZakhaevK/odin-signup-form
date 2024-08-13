@@ -1,10 +1,17 @@
+@font-face {
+  font-family: Norse-Bold;
+  src: url(fonts/Norse-Bold.otf);
+}
+
 body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   align-items: stretch;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   background-color: rgb(31, 31, 31);
   height: 100vh;
+  max-width: 1400px;
 }
 
 .sidebar {
@@ -12,8 +19,8 @@ body {
   flex-direction: column;
   justify-content:space-between;
   position: sticky;
-  width: 500px;
-  flex-shrink: 0.5;
+  flex-shrink: 0.7;
+  width: 750px;
   background-image: url(images/bg.avif);
   background-size: cover;
   background-position: center;
@@ -23,8 +30,9 @@ body {
 }
 
 .ribbon {
+  font-family: Norse-Bold;
   background-color: rgba(0, 0, 0, 40%);
-  font-size: 4rem;
+  font-size: 6rem;
   height: 135px;
   display: flex;
   align-items: center;
@@ -38,6 +46,12 @@ body {
 
 .sidebar p {
   align-self: center;
+  font-size: 0.8rem;
+  color: rgb(221, 221, 221);
+}
+
+.sidebar a {
+  color: rgb(221, 221, 221);
 }
 
 .main {
@@ -46,11 +60,11 @@ body {
   justify-content: center;
   background-color: rgb(230, 230, 230);
   padding: 0px;
-  width: 650px;
 }
 
 .main h2 {
   padding-left: 30px;
+  max-width: 55ch;
 }
 
 input, label, li, ul {
@@ -60,6 +74,7 @@ input, label, li, ul {
 }
 
 .main ul {
+  margin-top: 40px;
   padding-left: 30px;
   padding-bottom: 30px;
   box-shadow: 0px 3px 5px rgb(187, 187, 187);
@@ -69,19 +84,26 @@ input, label, li, ul {
 }
 
 .main ul h2 {
+  margin-right: auto;
   padding-left: 0px;
   flex: 100%;
+  display: block;
 }
 
 .main li {
   position: relative;
   list-style: none;
   margin-top: 30px;
+  margin-bottom: 10px;
+  margin-right: 40px;
 }
 
 .main li label {
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  color: rgb(80, 80, 80);
   top: -20px;
   left: 0px;
 }
@@ -93,9 +115,23 @@ input, label, li, ul {
 
 .main button {
   margin: 30px;
+  background-color: rgb(101, 121, 85);
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 7px;
+
 }
 
 .main p {
   margin-left: 30px;
+}
+
+.main a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(101, 121, 85);
 }
 
