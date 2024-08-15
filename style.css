@@ -3,6 +3,10 @@
   src: url(fonts/Norse-Bold.otf);
 }
 
+* {
+  box-sizing:content-box;
+}
+
 body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
@@ -109,8 +113,34 @@ input, label, li, ul {
 }
 
 .main li input {
+  width: 240px;
   margin-right: 30px;
-  padding: 2px;
+  padding: 4px;
+  border: solid rgb(218, 218, 218) 1px;
+  border-radius: 4px;
+  background-color: rgb(240, 240, 240);
+  outline: none;
+  position: relative;
+}
+
+.main li input:user-invalid {
+  border: solid rgb(216, 114, 114) 1px;
+}
+
+.main li input[id*="pw"]:user-invalid + div::after {
+  content: "* Passwords do not match";
+  position: absolute;
+  font-size: 0.7rem;
+  color: rgb(212, 0, 0);
+  top: 30px;
+  left: 0px;
+}
+
+.main li input:focus {
+  border: solid rgb(36, 121, 173) 1px;
+  box-shadow: 1px 1px 3px rgb(201, 201, 201);
+  background-color: rgb(240, 240, 240);
+
 }
 
 .main button {
@@ -121,7 +151,7 @@ input, label, li, ul {
   font-weight: 700;
   padding: 15px 40px;
   border: none;
-  border-radius: 7px;
+  border-radius: 9px;
 
 }
 
